@@ -9,10 +9,10 @@ const Banner = () => {
     <section className="text-gray-700 body-font h-screen max-h-screen flex items-center overflow-hidden">
       <div className="container mx-auto flex px-5 pt-12 md:flex-row flex-col items-center">
         <div className="lg:flex-grow w-full lg:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          <h1 className="title-font font-tessan font-bold sm:text-4xl text-3xl mb-4  text-gray-900">
             Raaj Rani Software Farm
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-xl">
             Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid
             swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.
           </p>
@@ -20,7 +20,7 @@ const Banner = () => {
             <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
               <label
                 htmlFor="hero-field"
-                className="leading-7 text-sm text-gray-600"
+                className="leading-7 text-lg text-gray-600"
               >
                 Subscribe
               </label>
@@ -29,12 +29,12 @@ const Banner = () => {
                 id="hero-field"
                 name="hero-field"
                 placeholder="example@email.com"
-                className="w-full bg-gray-100 rounded border border-gray-300 focus:border-green-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-100 rounded border border-gray-300 focu s:border-green-500 text-lg outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
             <ButtonGreen value="Submit" />
           </div>
-          <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
+          <p className="text-lg mt-2 text-gray-500 mb-8 w-full">
             Neutra shabby chic ramps, viral fixie.
           </p>
           <div className="flex lg:flex-row">

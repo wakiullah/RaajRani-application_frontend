@@ -1,3 +1,70 @@
-@tailwind base; 
-@tailwind components; 
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Industrial";
+    src: url("/fonts/industrial.woff2") format("woff2");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Tessan";
+    src: url("/fonts/Tessan-Bold.woff2") format("woff2"),
+      url("/fonts/Tessan-Bold.woff") format("woff");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Tessan";
+    src: url("/fonts/Tessan-Regular.woff2") format("woff2"),
+      url("/fonts/Tessan-Regular.woff") format("woff");
+    font-weight: 400;
+  }
+}
+
+body {
+  font-family: "Tessan";
+}
+p {
+  font-size: 1.125rem;
+}
+a {
+  font-size: 1.125rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+h6{
+  font-size: 20px;
+}

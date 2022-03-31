@@ -71,14 +71,14 @@ const Footer = () => {
         <div className="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
           {FooterLinks.map((catagorie, i) => (
             <div key={i} className="lg:w-1/6 md:w-1/3 w-1/2 px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+              <h2 className="title-font font-medium text-gray-900 tracking-widest text-lg mb-3">
                 {catagorie.catagorie}
               </h2>
               <nav className="list-none mb-10">
                 {catagorie.items.map((item, i) => (
                   <li key={i} className='py-1'>
                     <Link
-                      href={item.url}
+                      href={'/'}
                       className="text-gray-600 hover:text-gray-800"
                     >
                       <a>{item.name}</a>
@@ -96,7 +96,7 @@ const Footer = () => {
             <div className="relative sm:w-64 w-40 sm:mr-4 mr-2">
               <label
                 htmlFor="footer-field"
-                className="leading-7 text-sm text-gray-600"
+                className="leading-7 text-lg text-gray-600"
               >
                 Placeholder
               </label>
@@ -104,13 +104,13 @@ const Footer = () => {
                 type="text"
                 id="footer-field"
                 name="footer-field"
-                className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-lg outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
             <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
               Button
             </button>
-            <p className="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">
+            <p className="text-gray-500 text-lg md:ml-6 md:mt-0 mt-2 sm:text-left text-center">
               Bitters chicharrones fanny pack
               <br className="lg:block hidden" />
               waistcoat green juice
@@ -177,7 +177,7 @@ const Footer = () => {
       </div>
       <div className="bg-gray-100">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">
+          <p className="text-gray-500 text-lg text-center sm:text-left">
             © 2020 Tailblocks —
             <a
               href="https://twitter.com/knyttneve"
@@ -188,7 +188,7 @@ const Footer = () => {
               @knyttneve
             </a>
           </p>
-          <span className="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">
+          <span className="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-lg">
             Enamel pin tousled raclette tacos irony
           </span>
         </div>

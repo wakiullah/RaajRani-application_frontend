@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const user = {
   name: "Tom Cook",
@@ -13,7 +14,7 @@ const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Services", href: "#", current: false },
   { name: "Academy", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
+  { name: "Blog", href: "/blogs", current: false },
   { name: "Domain & Hosting", href: "#", current: false },
 ];
 const userNavigation = [
@@ -46,19 +47,19 @@ export default function Example() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-800 hover:bg-gray-700 hover:text-white",
-                              "px-3 py-2 rounded-sm text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
+                          <Link key={item.name} href={item.href}>
+                            <a
+                              className={classNames(
+                                item.current
+                                  ? "bg-gray-900 text-white"
+                                  : "text-gray-800 hover:bg-gray-700 hover:text-white",
+                                "px-3 py-2 rounded-sm text-lg font-medium"
+                              )}
+                              aria-current={item.current ? "page" : undefined}
+                            >
+                              {item.name}
+                            </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -76,7 +77,7 @@ export default function Example() {
                       {/* Profile dropdown */}
                       <Menu as="div" className="ml-3 relative">
                         <div>
-                          <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                          <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span className="sr-only">Open user menu</span>
                             <img
                               className="h-8 w-8 rounded-full"
@@ -102,7 +103,7 @@ export default function Example() {
                                     <a
                                       className={classNames(
                                         active ? "bg-gray-100" : "",
-                                        "block px-4 py-2 text-sm text-black hover:bg-gray-200"
+                                        "block px-4 py-2 text-lg text-black hover:bg-gray-200"
                                       )}
                                     >
                                       {item.name}
@@ -144,7 +145,7 @@ export default function Example() {
                         item.current
                           ? "bg-gray-900 text-white"
                           : "text-blue-500 hover:bg-gray-700 hover:text-white",
-                        "block px-3 py-2 rounded-md text-base font-medium"
+                        "block px-3 py-2 rounded-md text-lg font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
@@ -162,10 +163,10 @@ export default function Example() {
                       />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">
+                      <div className="text-lg font-medium leading-none text-white">
                         {user.name}
                       </div>
-                      <div className="text-sm font-medium leading-none text-gray-400">
+                      <div className="text-lg font-medium leading-none text-gray-400">
                         {user.email}
                       </div>
                     </div>
@@ -183,7 +184,7 @@ export default function Example() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                        className="block px-3 py-2 rounded-md text-lg font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                       >
                         {item.name}
                       </Disclosure.Button>
