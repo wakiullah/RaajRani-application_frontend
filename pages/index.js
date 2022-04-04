@@ -10,12 +10,13 @@ import Services from "@/components/Services/Services";
 import SortAbout from "@/components/HomePage/SortAbout";
 import Team from "@/components/HomePage/Team";
 
-const Home = () => {
+const Home = ({ services }) => {
+  console.log(process.env.GITHUB_SECRET);
   return (
     <div>
       <Banner />
       <SortAbout />
-      <Services />
+      <Services services={services} />
       <OurClints />
       <LeatestBlogs />
       <Portfolio />
@@ -26,3 +27,14 @@ const Home = () => {
   );
 };
 export default Home;
+
+export const getServerSideProps = async () => {
+  const res = await fetch("http://localhost:3000/api/service");
+  const services = await res.json();
+
+  return {
+    props: {
+      services,
+    },
+  };
+};

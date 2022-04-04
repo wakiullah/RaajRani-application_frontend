@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ButtonMore from "../Sort/ButtonMore";
 import ImageLayout from "../Sort/ImageLayout";
 // import bgImage from "/fullpage.png";
 
@@ -10,13 +11,13 @@ const Portfolio = () => {
     setActiveIndex(index);
   };
   return (
-    <div className="bg-white py-20">
+    <div className="py-20 bg-white">
       <div className="container mx-auto ">
-        <div className="text-center mb-10 text-gray-600 font-bold text-3xl">
+        <div className="mb-10 text-3xl font-bold text-center text-gray-600">
           <h2>Portfolio</h2>
         </div>
         <div className="flex justify-center">
-          <div className="flex mx-auto flex-wrap mb-20">
+          <div className="flex flex-wrap mx-auto mb-20">
             <a
               onClick={() => changePortFolioType(0)}
               className={`sm:px-6 py-3 w-1/2 ease-in duration-100 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium  inline-flex items-center leading-none  tracking-wider  ${
@@ -105,7 +106,7 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
-        <div className=" grid grid-cols-3 gap-5 gap-y-10">
+        <div className="grid grid-cols-3 gap-5 gap-y-10">
           <div className="box  h-[350px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/fullpage.png')] bg-cover"></div>
           <div className="box  h-[350px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/tailwind.png')] bg-cover"></div>
           <div className="box  h-[350px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/rokomari.png')] bg-cover"></div>
@@ -113,10 +114,8 @@ const Portfolio = () => {
           <div className="box  h-[350px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/fullpage.png')] bg-cover"></div>
           <div className="box  h-[350px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/tailwind.png')] bg-cover"></div>
         </div>
-        <div className="text-center mt-16">
-          <button className="text-center bg-white px-7 py-3 border-[3px] rounded-md text-xl font-medium border-gray-900 hover:text-white hover:bg-gray-800">
-            See More Work
-          </button>
+        <div className="mt-16 text-center">
+          <ButtonMore value="See More Work" />
         </div>
       </div>
     </div>
@@ -124,31 +123,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-// import React from "react";
-// import ImageLayout from "../Sort/ImageLayout";
-// // import bgImage from "/fullpage.png";
-
-// const Portfolio = () => {
-//   return (
-//     <div className="bg-gray-50 py-20">
-//       <div className="container mx-auto ">
-//         <div className="text-center mb-10 text-gray-600 font-bold text-3xl">
-//           <h2>Portfolio</h2>
-//         </div>
-//         <div className=" flex justify-between">
-//           <div
-//             className="box w-[580px] h-[400px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/fullpage.png')] bg-cover"
-//
-//           ></div>
-//           <div
-//             className="box w-[580px] h-[400px] bg-black ease-in-out duration-[5000ms] bg-top hover:bg-bottom bg-[url('/fullpage.png')] bg-cover"
-//             // style={{ backgroundImage: `url(${bgImage})` }}
-//           ></div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Portfolio;

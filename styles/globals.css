@@ -20,16 +20,55 @@
       url("/fonts/Tessan-Regular.woff") format("woff");
     font-weight: 400;
   }
+
+  /* ________Cupper Font Family--------- */
+
+  @font-face {
+    font-family: "Cupper";
+    src: url("/fonts/Cupper/Cooper-Book.woff2") format("woff2"),
+      url("/fonts/Cupper/Cooper-Book.woff") format("woff");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Cupper";
+    src: url("/fonts/Cupper/Cooper-Medium.woff2") format("woff2"),
+      url("/fonts/Cupper/Cooper-Medium.woff") format("woff");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Cupper";
+    src: url("/fonts/Cupper/Cooper-Semibold.woff2") format("woff2"),
+      url("/fonts/Cupper/Cooper-Semibold.woff") format("woff");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Cupper";
+    src: url("/fonts/Cupper/Cooper-Bold.woff2") format("woff2"),
+      url("/fonts/Cupper/Cooper-Bold.woff") format("woff");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Cupper";
+    src: url("/fonts/Cupper/Cooper-Heavy.woff2") format("woff2"),
+      url("/fonts/Cupper/Cooper-Heavy.woff") format("woff");
+    font-weight: 900;
+  }
 }
 
 body {
   font-family: "Tessan";
 }
 p {
-  font-size: 1.125rem;
+  font-size: 1.3rem;
 }
 a {
   font-size: 1.125rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Cupper';
 }
 
 .swiper {
@@ -64,7 +103,6 @@ a {
   object-fit: cover;
 }
 
-
-h6{
+h6 {
   font-size: 20px;
 }

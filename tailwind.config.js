@@ -28,8 +28,10 @@ module.exports = {
     extend: {
       colors: colors,
       fontFamily: {
-        industrial: "'Industrial', serif",
-        tessan: "'Tessan', serif",
+        industrial: "'Industrial','sans-serif', serif",
+        tessan: "'Tessan', 'sans-serif'",
+        cupper: "'Cupper', 'sans-serif'",
+        lorin: "'Lorin', 'sans-serif'",
       },
     },
     fontSize: {

@@ -3,21 +3,28 @@ import { useEffect } from "react";
 import "@/styles/globals.css";
 import Header from "@/components/Global/Header";
 import Footer from "@/components/Global/Footer";
-function MyApp({ Component, pageProps }) {
+import { SessionProvider } from "next-auth/react";
+
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   useEffect(() => {
     document.querySelector("body").classList.add("font-tessan");
   });
   if (Component.getLayout) {
     const getLayout = Component.getLayout || ((page) => page);
 
-    return getLayout(<Component {...pageProps} />);
+    return getLayout(
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    );
   }
+
   return (
-    <>
+    <SessionProvider session={session}>
       <Header />
       <Component {...pageProps} />;
       <Footer />
-    </>
+    </SessionProvider>
   );
 }
 
