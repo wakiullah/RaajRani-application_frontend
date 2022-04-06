@@ -4,7 +4,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 
 const user = {
   name: "Tom Cook",
