@@ -27,7 +27,7 @@ export default function Service({ services }) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/service");
   const services = await res.json();
 
