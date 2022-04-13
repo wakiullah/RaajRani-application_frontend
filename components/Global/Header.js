@@ -4,7 +4,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 
 const user = {
   name: "Tom Cook",
@@ -13,11 +13,12 @@ const user = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
+  { name: "Home", href: "/", current: true },
   { name: "Services", href: "/service", current: false },
   { name: "Academy", href: "#", current: false },
   { name: "Blog", href: "/blogs", current: false },
   { name: "Domain & Hosting", href: "/domain", current: false },
+  { name: "Forum", href: "/forum", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -57,16 +58,22 @@ export default function Example() {
                     </div>
                     <div className="hidden md:block">
                       <div className="flex items-baseline ml-10 space-x-4">
-                        {navigation.map((item) => (
+                        {navigation.map((item, i) => (
                           <Link key={item.name} href={item.href}>
                             <a
+                              onClick={(e) => {
+                                
+                                setCurrentMenu(i);
+                              }}
                               className={classNames(
-                                item.current
+                                currentMenu === i
                                   ? "bg-gray-900 text-white"
                                   : "text-gray-800 hover:bg-gray-700 hover:text-white",
                                 "px-3 py-2 rounded-sm text-lg font-medium"
                               )}
-                              aria-current={item.current ? "page" : undefined}
+                              aria-current={
+                                currentMenu === i ? "page" : undefined
+                              }
                             >
                               {item.name}
                             </a>

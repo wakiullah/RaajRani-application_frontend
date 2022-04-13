@@ -49,5 +49,5 @@ module.exports = {
       "7xl": "5rem",
     },
   },
-  plugins: [require("tw-elements/dist/plugin")],
+  plugins: [],
 };

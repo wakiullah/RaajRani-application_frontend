@@ -11,6 +11,11 @@ export default function Index() {
             <div>
               <h2 className="text-3xl font-semibold">Express your opinion</h2>
             </div>
+            <div>
+              <ForumPost/>
+              <ForumPost/>
+              <ForumPost/>
+            </div>
           </div>
           <div className="hidden w-4/12 -mx-8 lg:block">
          
